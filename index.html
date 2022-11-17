@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no">
+  <meta name="description" Content="가상여행, 파노라마, Google VR" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Serif+KR&family=Oswald&display=swap" rel="stylesheet">
+  <title>Google VR</title>
+  <link rel=stylesheet href="basic.css">
+  <script src="https://storage.googleapis.com/vrview/2.0/build/vrview.min.js"></script>
+</head>
+<body>
+    <div id='vrview'></div>
+    <script>
+        window.addEventListener('load', onVrViewLoad);
+
+        function onVrViewLoad() {
+        // Selector '#vrview' finds element with id 'vrview'.
+            var vrView = new VRView.Player('#vrview', {
+                image: 'http://localhost/googlevr/asset/panovr_0.jpg',
+                is_stereo: false
+            });
+        }
+    </script>
+</body>
+</html>
